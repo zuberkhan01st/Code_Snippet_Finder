@@ -3,7 +3,7 @@ import pandas as pd
 from streamlit_option_menu import option_menu
 
 # Load the datasets
-df = pd.read_csv("leetcodeDATA.csv")
+df = pd.read_csv("LeetcodeDATA.csv")
 descriptions = pd.read_csv("leetcode_dataset.csv")
 
 # Set page title and favicon
