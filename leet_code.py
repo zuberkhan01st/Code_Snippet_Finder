@@ -19,15 +19,16 @@ if selected == 'Leetcode':
 
     # Input field for question ID
     question_id = st.number_input('Enter the question ID:', min_value=1, max_value=len(df), value=1, step=1)
-
+    
     # Adjust question ID to zero-based indexing
     question_index = question_id - 1
-
+    
     if st.button('Get Code Snippet'):
         # Retrieve title
         title = descriptions.loc[descriptions['id'] == question_id, 'title'].iloc[0]
         st.header(title)
 
+        st.title('Description:')
         # Retrieve Description
         description = descriptions.loc[descriptions['id'] == question_id, 'description'].iloc[0]
         st.header(description)
